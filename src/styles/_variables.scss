@@ -1,11 +1,16 @@
-// 1. TAILLES DU HEADER (Priorité haute pour éviter l'erreur)
+// 1. TAILLES DU HEADER
 $header-height-mobile: 3rem;  
 $header-height-tablet: 4rem;  
 $header-height-desktop: 6rem; 
 
-// 2. ALIAS POUR MAIN.SCSS
-$blue-light: #f1f8fc;
-$blue-dark:  #00497c;
+// 2. PALETTE OFFICIELLE (Codes exacts de ta maquette)
+$blue-header:   #0074C7; // Texte menu
+$blue-dark:     #00497C; // Texte principal instructions / Noms artisans
+$blue-admin:    #00497C; // Alias pour cohérence
+$green-accent:  #82B864; // Mot "artisan"
+$red-alert:     #CD2C2E; // Texte "48h" et "VOIR LA FICHE"
+$text-dark:     #384050;
+$blue-bg:       #f1f8fc;
 
 // 3. POLICES
 @font-face {
@@ -19,15 +24,7 @@ $blue-dark:  #00497c;
   font-weight: 700;
 }
 
-// 4. PALETTE OFFICIELLE RÉGION
-$blue-admin:    #00497c;
-$blue-button:   #0074c7;
-$blue-bg:       #f1f8fc;
-$text-dark:     #384050;
-$red-alert:     #cd2c2e;
-$green-accent:  #82b864;
-
-// 5. SURCHARGE BOOTSTRAP
+// 4. SURCHARGE BOOTSTRAP
 $font-family-sans-serif: 'Graphik', sans-serif;
 $primary: $blue-admin;
 $body-bg: #ffffff;

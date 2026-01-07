@@ -1,0 +1,94 @@
+@import "../../styles/variables";
+@import "~bootstrap/scss/bootstrap";
+
+// --- STYLE PAR DÉFAUT (MOBILE) ---
+.custom-header {
+  background-color: #f1f8fc !important;
+  height: auto; // Important pour que le menu puisse s'ouvrir
+  padding: 0.5rem 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  .header-logo {
+    height: 50px; // Petit logo mobile
+    width: auto;
+  }
+
+  // Le menu ouvert sur mobile
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 0 1rem 1rem 1rem; // Un peu d'espace autour
+  }
+
+  .nav-link {
+    color: $blue-header !important;
+    font-weight: 700;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  // BARRE DE RECHERCHE (Style Mobile)
+  .search-container {
+    display: flex;       // Force l'affichage
+    justify-content: center;
+    margin-top: 1.5rem;  // Espace avec les liens du dessus
+    width: 100%;
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #384050;
+      border-radius: 20px;
+      height: 40px;      // Un peu plus haut sur mobile pour le doigt
+      width: 100%;       // Prend toute la largeur disponible
+      max-width: 350px;  // Ne devient pas trop large sur tablette
+      overflow: hidden;
+
+      input {
+        border: none;
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        padding-left: 15px;
+        &:focus { outline: none; }
+      }
+      
+      .btn-search {
+        background: transparent;
+        border: none;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  // --- STYLE DESKTOP (ÉCRANS XL+) ---
+  @include media-breakpoint-up(xl) {
+    height: $header-height-desktop; 
+    padding: 0 !important;
+
+    .header-logo { height: 85px; }
+
+    .navbar-collapse {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      padding: 0 !important;
+      border: none;
+      font-size: 1.3rem;
+    }
+
+    .search-container {
+      margin: 0;
+      width: auto; // On repasse en largeur auto
+      
+      .search-box {
+        width: 250px; // Largeur fixe desktop
+        height: 35px;
+      }
+    }
+  }
+}

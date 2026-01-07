@@ -1,4 +1,13 @@
-// Import des polices
+// 1. TAILLES DU HEADER (Priorité haute pour éviter l'erreur)
+$header-height-mobile: 3rem;  
+$header-height-tablet: 4rem;  
+$header-height-desktop: 6rem; 
+
+// 2. ALIAS POUR MAIN.SCSS
+$blue-light: #f1f8fc;
+$blue-dark:  #00497c;
+
+// 3. POLICES
 @font-face {
   font-family: 'Graphik';
   src: url('../assets/fonts/Graphik-Regular-Trial.otf') format('opentype');
@@ -10,15 +19,15 @@
   font-weight: 700;
 }
 
-// Palette officielle de la Région
-$blue-admin:    #00497c; // Header, Footer, Titres
-$blue-button:   #0074c7; // Boutons d'action
-$blue-bg:       #f1f8fc; // Fond des fiches artisans
-$text-dark:     #384050; // Texte Graphik principal
-$red-alert:     #cd2c2e; // Mention "48h" et Page 404
-$green-accent:  #82b864; // Accent "artisan"
+// 4. PALETTE OFFICIELLE RÉGION
+$blue-admin:    #00497c;
+$blue-button:   #0074c7;
+$blue-bg:       #f1f8fc;
+$text-dark:     #384050;
+$red-alert:     #cd2c2e;
+$green-accent:  #82b864;
 
-// Surcharge Bootstrap
+// 5. SURCHARGE BOOTSTRAP
 $font-family-sans-serif: 'Graphik', sans-serif;
 $primary: $blue-admin;
 $body-bg: #ffffff;

@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/header/header';
+import './styles/main.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Header />
+      {/* On ajoute 'pt-5' ou une marge personnalisée pour descendre le contenu */}
+      <div className="container mt-header pt-5">
+        <h1 className="text-primary fw-bold text-center">Trouve ton artisan</h1>
+        <p className="text-center">Avec la région Auvergne-Rhône-Alpes</p>
+      </div>
+    </>
   );
 }
-
 export default App;

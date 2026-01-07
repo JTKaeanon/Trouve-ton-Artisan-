@@ -1,0 +1,25 @@
+// Import des polices
+@font-face {
+  font-family: 'Graphik';
+  src: url('../assets/fonts/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('../assets/fonts/Graphik-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+}
+
+// Palette officielle de la Région
+$blue-admin:    #00497c; // Header, Footer, Titres
+$blue-button:   #0074c7; // Boutons d'action
+$blue-bg:       #f1f8fc; // Fond des fiches artisans
+$text-dark:     #384050; // Texte Graphik principal
+$red-alert:     #cd2c2e; // Mention "48h" et Page 404
+$green-accent:  #82b864; // Accent "artisan"
+
+// Surcharge Bootstrap
+$font-family-sans-serif: 'Graphik', sans-serif;
+$primary: $blue-admin;
+$body-bg: #ffffff;
+$body-color: $text-dark;

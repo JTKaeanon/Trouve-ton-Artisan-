@@ -1,0 +1,38 @@
+// 1. Tes variables (Couleurs Région, Breakpoints)
+@import "variables"; 
+
+// 2. Bootstrap (Qui contient le Reset/Reboot)
+@import "~bootstrap/scss/bootstrap"; 
+
+// 3. Tes styles personnalisés (Ceux qui utilisent tes maquettes)
+@import "header";
+@import "cards";
+
+// Application de tes hauteurs de Header
+.custom-header {
+  height: $header-height-mobile;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px solid $blue-light;
+
+  @include media-breakpoint-up(md) {
+    height: $header-height-tablet;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: $header-height-desktop;
+  }
+}
+
+// Style de tes "Cards" artisans
+.artisan-card {
+  border: 2px solid $blue-dark;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $blue-light;
+  
+  .card-img-overlay {
+    background: rgba(255, 255, 255, 0.7); // Pour l'effet lisible sur image
+  }
+}

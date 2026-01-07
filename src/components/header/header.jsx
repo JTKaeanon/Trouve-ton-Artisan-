@@ -1,53 +1,55 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../../assets/img/Logo.png'; 
+import './header.scss';
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-xl bg-white shadow-sm sticky-top custom-header">
-      <div className="container-fluid d-flex align-items-center flex-nowrap">
+    <nav className="navbar navbar-expand-xl custom-header sticky-top">
+      <div className="container-fluid px-3 px-xl-5">
         
-        {/* 1. LOGO */}
-        <Link className="navbar-brand me-2" to="/" style={{ flexShrink: 0 }}>
+        {/* LOGO */}
+        <Link className="navbar-brand me-xl-5" to="/">
           <img src={logoImg} alt="Trouve ton artisan" className="header-logo" />
         </Link>
 
-        {/* 2. RECHERCHE */}
-        <form className="d-flex flex-grow-1 mx-2 search-container order-2 order-xl-last">
-          <div className="input-group">
-            <input 
-              className="form-control rounded-start-pill border-primary border-end-0" 
-              type="search" 
-              placeholder="Rechercher..." 
-            />
-            <span className="input-group-text bg-white border-primary border-start-0 rounded-end-pill">
-              <i className="bi bi-search text-primary"></i>
-            </span>
-          </div>
-        </form>
-
-        {/* 3. BURGER (Cible #navbarNav) */}
+        {/* BURGER */}
         <button 
-          className="navbar-toggler border-0 order-3 ms-1" 
+          className="navbar-toggler" 
           type="button" 
           data-bs-toggle="collapse" 
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* 4. LIENS (Menu déroulant qui doit descendre) */}
-        <div className="collapse navbar-collapse order-xl-2" id="navbarNav">
-          <ul className="navbar-nav ms-auto fw-bold text-nowrap align-items-start">
+        {/* ZONE PLIABLE (Tout ce qui est ici se cache sur mobile) */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          
+          {/* Les Liens */}
+          <ul className="navbar-nav w-100 justify-content-evenly fw-bold">
             <li className="nav-item"><NavLink className="nav-link" to="/category/batiment">Bâtiment</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/category/services">Services</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/category/fabrication">Fabrication</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/category/alimentation">Alimentation</NavLink></li>
           </ul>
+
+          {/* LA RECHERCHE (Doit être ici pour apparaître dans le menu) */}
+          <form className="search-container ms-xl-5">
+            <div className="input-group search-box">
+              <input 
+                className="form-control" 
+                type="search" 
+                placeholder="Rechercher..." 
+                aria-label="Rechercher"
+              />
+              <button className="btn btn-search" type="submit">
+                <i className="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
         </div>
-        
       </div>
     </nav>
   );

@@ -18,7 +18,7 @@
         "note": 4.8,
         "location": "Montélimar",
         "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
-        "email": "aunpinachaud@hotmail.com",
+        "email": "aupainchaud@hotmail.com",
         "website": "",
         "category": "Alimentation",
         "top": true
@@ -146,7 +146,7 @@
 
     {
         "id": "13",
-        "name": "",
+        "name": "Leala Dennis",
         "specialty": "Coiffeur",
         "note": 3.8,
         "location": "Chambéry",
@@ -188,7 +188,7 @@
         "name": "Valérie Laderoute",
         "specialty": "Toiletteur",
         "note": 4.5,
-        "location": "",
+        "location": "Valence",
         "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
         "email": "v-laredoute@gmail.com",
         "website": "",

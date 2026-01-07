@@ -1,38 +1,79 @@
-// 1. Tes variables (Couleurs Région, Breakpoints)
+// 1. LES IMPORTS
 @import "variables"; 
-
-// 2. Bootstrap (Qui contient le Reset/Reboot)
-@import "~bootstrap/scss/bootstrap"; 
-
-// 3. Tes styles personnalisés (Ceux qui utilisent tes maquettes)
-@import "header";
+@import "~bootstrap/scss/bootstrap";
+@import "header"; 
 @import "cards";
 
-// Application de tes hauteurs de Header
+// 2. STYLES DU HEADER
 .custom-header {
   height: $header-height-mobile;
-  display: flex;
-  align-items: center;
   background-color: white;
-  border-bottom: 2px solid $blue-light;
+  z-index: 1050; // Priorité maximale
+  padding: 0 0.5rem;
 
-  @include media-breakpoint-up(md) {
-    height: $header-height-tablet;
+  .container-fluid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    height: 100%;
+    position: relative; // Important pour le positionnement du menu
+  }
+
+  .header-logo {
+    max-height: 55px;
+    width: auto;
+  }
+
+  // FORCE LE MENU BURGER À DESCENDRE
+  .navbar-collapse {
+    @media (max-width: 1199px) {
+      position: absolute;
+      top: 100%; // Se place exactement sous le header blanc
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+      border-bottom: 2px solid $blue-light;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+  }
+
+  .search-container {
+    max-width: 180px; 
+    input, .input-group-text { height: 34px; border-color: $blue-admin; }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 350px !important;
+      input, .input-group-text { height: 42px; }
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 73, 124, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
   @include media-breakpoint-up(xl) {
     height: $header-height-desktop;
+    padding: 0 4rem;
+    .header-logo { max-height: 85px; }
+    .nav-link { margin: 0 1.5rem; color: $blue-admin !important; font-size: 1.2rem; }
   }
 }
 
-// Style de tes "Cards" artisans
+// 3. FIX CONTENU
+main, .container.mt-5 {
+  margin-top: calc(#{$header-height-mobile} + 2.5rem) !important;
+  @include media-breakpoint-up(xl) {
+    margin-top: calc(#{$header-height-desktop} + 4rem) !important;
+  }
+}
+
+// 4. STYLE DES CARTES
 .artisan-card {
-  border: 2px solid $blue-dark;
-  border-radius: 8px;
+  border: 2px solid $blue-admin;
+  border-radius: 12px;
   overflow: hidden;
   background-color: $blue-light;
-  
-  .card-img-overlay {
-    background: rgba(255, 255, 255, 0.7); // Pour l'effet lisible sur image
-  }
+  transition: transform 0.2s ease;
+  &:hover { transform: translateY(-5px); }
 }

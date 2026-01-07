@@ -1,36 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import logoImg from '../../assets/img/Logo.png'; 
 import './footer.scss';
 
 const Footer = () => {
   return (
-    <footer className="custom-footer mt-auto">
+    <footer className="custom-footer">
       <div className="container">
-        <div className="row text-center text-md-start align-items-center">
+        <div className="row align-items-center">
           
-          {/* Liens légaux */}
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
+          {/* Menu Légal */}
+          <div className="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
             <ul className="list-unstyled mb-0">
-              <li><a href="/mentions-legales">Mentions Légales</a></li>
-              <li><a href="/donnees-personnelles">Données personnelles</a></li>
-              <li><a href="/accessibilite">Accessibilité</a></li>
-              <li><a href="/cookies">Gestion des cookies</a></li>
+              <li><Link to="/mentions-legales">Mentions Légales</Link></li>
+              <li><Link to="/donnees-personnelles">Données personnelles</Link></li>
+              <li><Link to="/accessibilite">Accessibilité</Link></li>
+              <li><Link to="/cookies">Gestion des cookies</Link></li>
             </ul>
           </div>
 
-          {/* Logo et slogan central */}
-          <div className="col-12 col-md-4 mb-4 mb-md-0 text-center">
-            <h2 className="h5 fw-bold mb-1">Trouve ton artisan !</h2>
-            <p className="small mb-0">Avec la région<br/>Auvergne-Rhône-Alpes</p>
+          {/* Logo */}
+          <div className="col-12 col-md-4 text-center mb-3 mb-md-0">
+            <img src={logoImg} alt="Logo Région Auvergne-Rhône-Alpes" className="footer-logo" />
           </div>
 
-          {/* Adresse et Contact */}
-          <div className="col-12 col-md-4 text-md-end text-center">
+          {/* Contact */}
+          <div className="col-12 col-md-4 text-center text-md-end">
             <address className="mb-0">
               101 cours Charlemagne<br />
               CS 20033<br />
               69269 LYON CEDEX 02<br />
               France<br />
-              <a href="tel:+33426734000" className="fw-bold">+33 (0)4 26 73 40 00</a>
+              <a href="tel:+33426734000" className="fw-bold text-white text-decoration-none">+33 (0)4 26 73 40 00</a>
             </address>
           </div>
 

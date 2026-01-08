@@ -41,7 +41,7 @@ const ArtisanCard = ({ artisan }) => {
             to={`/artisan/${artisan.id}`} 
             className="btn-voir-fiche mt-3 d-inline-block text-decoration-none"
           >
-            VOIR LA FICHE <br /> DE L'ARTISAN
+            VOIR LA FICHE DE L'ARTISAN
           </Link>
           
         </div>

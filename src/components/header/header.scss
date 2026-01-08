@@ -3,9 +3,9 @@
 
 // --- STYLE PAR DÉFAUT (MOBILE) ---
 .custom-header {
-  background-color: #f1f8fc !important;
+  background-color: $white ;
   height: auto; // Important pour que le menu puisse s'ouvrir
-  padding: 0.5rem 0 !important;
+  padding: 0.5rem 0 ;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 
@@ -21,11 +21,18 @@
   }
 
   .nav-link {
-    color: $blue-header !important;
+    color: $blue-light;
     font-weight: 700;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(155, 0, 0, 0.05);
+    // --- AJOUTE CECI POUR GERER LE HOVER ---
+    transition: color 0.3s; // Pour une transition douce
+
+    &:hover {
+      color: $blue-dark; // (ou une autre couleur de tes variables)
+      text-decoration: underline; // Optionnel : pour souligner
+    }
   }
 
   // BARRE DE RECHERCHE (Style Mobile)
@@ -66,7 +73,7 @@
   // --- STYLE DESKTOP (ÉCRANS XL+) ---
   @include media-breakpoint-up(xl) {
     height: $header-height-desktop; 
-    padding: 0 !important;
+    padding: 0 ;
 
     .header-logo { height: 85px; }
 
@@ -76,7 +83,7 @@
     }
 
     .nav-link {
-      padding: 0 !important;
+      padding: 0 ;
       border: none;
       font-size: 1.3rem;
     }

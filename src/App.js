@@ -1,47 +1,29 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Layout
 import Header from './components/header/header';
-import Footer from './components/footer/footer'; // Ajout de l'import
-import ArtisanCard from './components/artisancard/ArtisanCard';
-import artisansData from './data/artisans.json';
+import Footer from './components/footer/footer';
 import './styles/main.scss';
 
+// Pages
+import Home from './pages/Home';
+import FicheArtisan from './pages/FicheArtisan'; // <--- 1. AJOUTE L'IMPORT ICI
 
 function App() {
-  const topArtisans = artisansData.filter(artisan => artisan.top === true);
-  console.log("Artisans filtrés :", topArtisans);
-
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100">
       <Header />
 
-      <main className="container-fluid p-0">
-        {/* Section Instructions */}
-        <div className="container py-4 text-center">
-          <h2 className="fw-bold" style={{ color: '#00497C' }}>
-            Comment trouver mon <span style={{ color: '#82B864' }}>artisan</span> ?
-          </h2>
-          <ul className="list-unstyled d-inline-block text-start mt-3" style={{ color: '#00497C' }}>
-            <li>Étape 1 : Choisir la catégorie d'artisan dans le menu</li>
-            <li>Étape 2 : Choisir un artisan</li>
-            <li>Étape 3 : Le contacter via le formulaire de contact</li>
-            <li>Étape 4 : Une réponse sera apportée sous <span style={{ color: '#CD2C2E', fontWeight: 'bold' }}>48h</span></li>
-          </ul>
-        </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+        {/* 2. DÉCOMMENTE OU AJOUTE CETTE LIGNE : */}
+        <Route path="/artisan/:id" element={<FicheArtisan />} />
+        
+        <Route path="*" element={<Home />} />
+      </Routes>
 
-        {/* Bannière Bleue */}
-        <div className="banner-blue">
-          <h1 className="display-4 fw-bold">NOS ARTISANS DU MOIS</h1>
-        </div>
-
-        {/* Grille des Artisans */}
-        <div className="container">
-          <div className="row">
-            {topArtisans.map(artisan => (
-              <ArtisanCard key={artisan.id} artisan={artisan} />
-            ))}
-          </div>
-        </div>
-      </main>
       <Footer />
     </div>
   );

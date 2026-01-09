@@ -1,9 +1,27 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react'; 
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logoImg from '../../assets/img/Logo.png'; 
 import './header.scss';
 
 const Header = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/search?q=${searchTerm}`);
+      setSearchTerm('');
+      
+      // close menu after research
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    }
+  };
+
+
   return (
     <nav className="navbar navbar-expand-xl custom-header sticky-top">
       <div className="container-fluid px-3 px-xl-5">
@@ -35,13 +53,15 @@ const Header = () => {
           </ul>
 
           {/* RESEARCH BAR */}
-          <form className="search-container ms-xl-5">
+          <form className="search-container ms-xl-5" onSubmit={handleSearch}>
             <div className="input-group search-box">
               <input 
                 className="form-control" 
                 type="search" 
                 placeholder="Rechercher..." 
                 aria-label="Rechercher"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
               <button className="btn btn-search" type="submit">
                 <i className="bi bi-search"></i>

@@ -6,7 +6,8 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './pages/Home';
 import FicheArtisan from './pages/FicheArtisan';
-import Category from './pages/Category'; 
+import Search from './pages/Search';
+import Category from './pages/Category';
 
 function App() {
   return (
@@ -17,13 +18,16 @@ function App() {
       <Routes>
         {/* Route Accueil */}
         <Route path="/" element={<Home />} />
-        
+
         {/* Route Fiche Artisan */}
         <Route path="/artisan/:id" element={<FicheArtisan />} />
-        
+
         {/* Route Catégorie  */}
         <Route path="/category/:category" element={<Category />} />
-        
+
+        {/* Route search  */}
+        <Route path="/search" element={<Search />} />
+
         {/* Route 404  */}
         <Route path="*" element={<Home />} />
       </Routes>

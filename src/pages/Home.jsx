@@ -1,6 +1,6 @@
 import React from 'react';
 import ArtisanCard from '../components/artisancard/ArtisanCard';
-import artisansData from '../data/artisans.json'; 
+import artisansData from '../database/artisans.json'; 
 
 const Home = () => {
   // TOP ARTISANS

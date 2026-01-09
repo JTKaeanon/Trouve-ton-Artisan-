@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ArtisanCard from '../components/artisancard/ArtisanCard';
-import artisansData from '../data/artisans.json'; 
+import artisansData from '../database/artisans.json'; 
 
 const Category = () => {
   const { category } = useParams();

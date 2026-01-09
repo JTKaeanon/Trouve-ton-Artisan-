@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import artisansData from '../data/artisans.json'; 
+import artisansData from '../database/artisans.json'; 
 import '../assets/styles/pages/FicheArtisan.scss';
 
 const FicheArtisan = () => {

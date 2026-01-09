@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ArtisanCard from '../components/artisancard/ArtisanCard';
-import artisansData from '../data/artisans.json'; 
+import artisansData from '../database/artisans.json'; 
 
 const Search = () => {
   const [searchParams] = useSearchParams();

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // 1. Import du Link
+import { Link } from 'react-router-dom'; 
 import './ArtisanCard.scss';
 
 const ArtisanCard = ({ artisan }) => {
   
-  // Chemin vers tes images (dossier specialites)
+  // images
   const backgroundStyle = {
     backgroundImage: `url(/assets/img/specialites/${artisan.image})`, 
     backgroundSize: 'cover',
@@ -36,7 +36,7 @@ const ArtisanCard = ({ artisan }) => {
           
           <p className="fw-bold location-text">{artisan.location}</p>
 
-          {/* 2. Remplacement du bouton par un Link */}
+          
           <Link 
             to={`/artisan/${artisan.id}`} 
             className="btn-voir-fiche mt-3 d-inline-block text-decoration-none"

@@ -1,8 +1,8 @@
-@import "../../styles/variables";
+@import "../../assets/styles/variables";
 @import "~bootstrap/scss/bootstrap";
 
 .custom-footer {
-  background-color: #0074c7; // Le bleu vif de ta maquette
+  background-color: #0074c7; // 
   color: white;
   padding: 3rem 0;
   margin-top: 4rem;
@@ -18,7 +18,7 @@
 
   .footer-logo {
     max-height: 80px;
-    filter: brightness(0) invert(1); // Rend le logo tout blanc si nécessaire
+    filter: brightness(0) invert(1); // white logo
   }
 
   address {

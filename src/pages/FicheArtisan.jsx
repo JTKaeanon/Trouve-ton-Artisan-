@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import artisansData from '../data/artisans.json'; 
-import './FicheArtisan.scss'; 
+import '../assets/styles/pages/FicheArtisan.scss';
 
 const FicheArtisan = () => {
   const { id } = useParams();
@@ -25,7 +25,7 @@ const FicheArtisan = () => {
         
         <div className="row gy-4">
           
-          {/* FRAME 1 : INFOS ARTISAN (Gauche) */}
+          {/* INFOS ARTISAN (LEFT) */}
           <div className="col-12 col-lg-7">
             <section className="frame-artisan-info p-4 h-100">
               <div className="img-container mb-3">
@@ -45,16 +45,16 @@ const FicheArtisan = () => {
             </section>
           </div>
 
-          {/* COLONNE DROITE */}
+          {/* RIGHT */}
           <div className="col-12 col-lg-5">
             
-            {/* FRAME 2 : CONTACT INFO */}
+            {/* CONTACT INFO */}
             <section className="frame-contact-info p-4 mb-4">
               <h3 className="card-title mb-4 text-center">Coordonnées de l'artisan</h3>
               
               <div className="contact-list">
                 
-                {/* --- MODIFICATION ICI : BOUTON SITE WEB --- */}
+                {/* SITE WEB */}
                 {artisan.website && (
                   <a 
                     href={artisan.website} 
@@ -65,7 +65,7 @@ const FicheArtisan = () => {
                     Visiter le site web
                   </a>
                 )}
-                {/* ------------------------------------------ */}
+              
 
                 <div className="contact-item">
                   <i className="fas fa-envelope me-2"></i>
@@ -74,7 +74,7 @@ const FicheArtisan = () => {
               </div>
             </section>
 
-            {/* FRAME 3 : FORMULAIRE */}
+            {/* FORMULAIRE */}
             <section className="frame-contact-form p-4">
               <h3 className="card-title mb-3 text-center">Contacter l'artisan</h3>
               

@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../assets/styles/variables";
 @import "~bootstrap/scss/bootstrap";
 
 .artisan-card-premium {
@@ -16,7 +16,7 @@
     transform: scale(1.01);
   }
 
-  // Le voile blanc translucide de la maquette
+  
   &::before {
     content: "";
     position: absolute;
@@ -48,9 +48,9 @@
 
   .stars-container {
     font-size: 1.4rem;
-    letter-spacing: -1px; // Rapproche les étoiles
+    letter-spacing: -1px; 
     
-    .star-filled { color: $blue-light;} // Étoiles foncées
+    .star-filled { color: $blue-light;} 
     .star-empty { color: #d1d1d1; }
   }
 

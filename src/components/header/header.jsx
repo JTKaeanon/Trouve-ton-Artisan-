@@ -23,10 +23,10 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* ZONE PLIABLE (Tout ce qui est ici se cache sur mobile) */}
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           
-          {/* Les Liens */}
+          {/* LINKS */}
           <ul className="navbar-nav w-100 justify-content-evenly fw-bold">
             <li className="nav-item"><NavLink className="nav-link" to="/category/batiment">Bâtiment</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/category/services">Services</NavLink></li>
@@ -34,7 +34,7 @@ const Header = () => {
             <li className="nav-item"><NavLink className="nav-link" to="/category/alimentation">Alimentation</NavLink></li>
           </ul>
 
-          {/* LA RECHERCHE (Doit être ici pour apparaître dans le menu) */}
+          {/* RESEARCH BAR */}
           <form className="search-container ms-xl-5">
             <div className="input-group search-box">
               <input 

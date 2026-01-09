@@ -12,19 +12,10 @@ $dark:     #384050;
 $white:       #f1f8fc;
 
 // 3. POLICES
-@font-face {
-  font-family: 'Graphik';
-  src: url('../fonts/Graphik-Regular-Trial.otf') format('opentype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Graphik';
-  src: url('../fonts/Graphik-Regular-Trial.otf') format('opentype');
-  font-weight: 700;
-}
 
-// 4. SURCHARGE BOOTSTRAP
-$font-family-sans-serif: 'Graphik', sans-serif;
+
+$font-family-base: 'Graphik', sans-serif;
+$headings-font-family: 'Graphik', sans-serif;
 $primary: $blue-dark;
 $body-bg: $white;
 $body-color: $dark;

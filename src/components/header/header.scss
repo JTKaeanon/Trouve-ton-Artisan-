@@ -1,23 +1,23 @@
-@import "../../styles/variables";
+@import "../../assets/styles/variables";
 @import "~bootstrap/scss/bootstrap";
 
-// --- STYLE PAR DÉFAUT (MOBILE) ---
+// DÉFAUT (MOBILE) 
 .custom-header {
   background-color: $white ;
-  height: auto; // Important pour que le menu puisse s'ouvrir
+  height: auto; 
   padding: 0.5rem 0 ;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 
   .header-logo {
-    height: 50px; // Petit logo mobile
+    height: 50px; 
     width: auto;
   }
 
-  // Le menu ouvert sur mobile
+  
   .navbar-collapse {
     margin-top: 1rem;
-    padding: 0 1rem 1rem 1rem; // Un peu d'espace autour
+    padding: 0 1rem 1rem 1rem; 
   }
 
   .nav-link {
@@ -26,20 +26,19 @@
     padding: 10px 0;
     text-align: center;
     border-bottom: 1px solid rgba(155, 0, 0, 0.05);
-    // --- AJOUTE CECI POUR GERER LE HOVER ---
-    transition: color 0.3s; // Pour une transition douce
+      transition: color 0.3s; 
 
     &:hover {
-      color: $blue-dark; // (ou une autre couleur de tes variables)
-      text-decoration: underline; // Optionnel : pour souligner
+      color: $blue-dark; 
+      text-decoration: underline; 
     }
   }
 
-  // BARRE DE RECHERCHE (Style Mobile)
+  // RESEARCH BAR (Mobile)
   .search-container {
-    display: flex;       // Force l'affichage
+    display: flex;       
     justify-content: center;
-    margin-top: 1.5rem;  // Espace avec les liens du dessus
+    margin-top: 1.5rem;  
     width: 100%;
 
     .search-box {
@@ -48,9 +47,9 @@
       background: white;
       border: 1px solid #384050;
       border-radius: 20px;
-      height: 40px;      // Un peu plus haut sur mobile pour le doigt
-      width: 100%;       // Prend toute la largeur disponible
-      max-width: 350px;  // Ne devient pas trop large sur tablette
+      height: 40px;      
+      width: 100%;       
+      max-width: 350px; 
       overflow: hidden;
 
       input {
@@ -70,7 +69,7 @@
     }
   }
 
-  // --- STYLE DESKTOP (ÉCRANS XL+) ---
+  //  DESKTOP (ÉCRANS XL+)
   @include media-breakpoint-up(xl) {
     height: $header-height-desktop; 
     padding: 0 ;
@@ -90,10 +89,10 @@
 
     .search-container {
       margin: 0;
-      width: auto; // On repasse en largeur auto
+      width: auto; 
       
       .search-box {
-        width: 250px; // Largeur fixe desktop
+        width: 250px; 
         height: 35px;
       }
     }

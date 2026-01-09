@@ -3,13 +3,13 @@ import ArtisanCard from '../components/artisancard/ArtisanCard';
 import artisansData from '../data/artisans.json'; 
 
 const Home = () => {
-  // On récupère uniquement les artisans du "Top" pour l'accueil
+  // TOP ARTISANS
   const topArtisans = artisansData.filter(artisan => artisan.top === true);
 
   return (
     <main className="container-fluid p-0">
       
-      {/* Section Instructions */}
+      {/* HOW TO */}
       <div className="container py-4 text-center">
         <h2 className="fw-bold" style={{ color: '#00497C' }}>
           Comment trouver mon <span style={{ color: '#82B864' }}>artisan</span> ?
@@ -22,12 +22,12 @@ const Home = () => {
         </ul>
       </div>
 
-      {/* Bannière Bleue */}
+      
       <div className="banner-blue">
         <h1 className="display-4 fw-bold">NOS ARTISANS DU MOIS</h1>
       </div>
 
-      {/* Grille des Artisans */}
+      {/* GRID TOP ARTISANTS */}
       <div className="container mb-5">
         <div className="row">
           {topArtisans.map(artisan => (

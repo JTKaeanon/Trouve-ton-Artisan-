@@ -1,8 +1,25 @@
 @charset "UTF-8"; 
+
+// Fonts
+@font-face {
+  font-family: 'Graphik';
+  src: url('../fonts/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('../fonts/Graphik-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// IMPORTS
 @import "variables"; 
 @import "~bootstrap/scss/bootstrap";
 
-// 2. STYLES GLOBAUX
+// STYLES 
 main {
   padding-top: 2rem; 
   
@@ -11,7 +28,7 @@ main {
   }
 }
 
-// 3. SECTIONS DE LA MAQUETTE
+// SECTIONS
 .banner-blue {
   background-color: $blue-light; 
   color: white;

@@ -3,7 +3,7 @@
         "id": "1",
         "name": "Boucherie Dumond",
         "specialty": "Boucher",
-        "image":"boucher.jpg",
+        "image":"boucherie.jpg",
         "note": 4.5,
         "location": "Lyon",
         "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",

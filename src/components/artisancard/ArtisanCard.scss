@@ -13,7 +13,7 @@
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
 
   // Le voile blanc translucide de la maquette
@@ -42,6 +42,7 @@
       font-size: 1.2rem; 
       font-weight: 600;
       margin-bottom: 0.8rem;
+      color : $dark;
     }
   }
 
@@ -49,12 +50,12 @@
     font-size: 1.4rem;
     letter-spacing: -1px; // Rapproche les étoiles
     
-    .star-filled { color: $blue-dark; } // Étoiles foncées
+    .star-filled { color: $blue-light;} // Étoiles foncées
     .star-empty { color: #d1d1d1; }
   }
 
   .btn-voir-fiche {
-    color: $red-alert; // #CD2C2E
+    color: $red; // #CD2C2E
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1rem;

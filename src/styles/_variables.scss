@@ -4,13 +4,12 @@ $header-height-tablet: 4rem;
 $header-height-desktop: 6rem; 
 
 // 2. PALETTE OFFICIELLE (Codes exacts de ta maquette)
-$blue-header:   #0074C7; // Texte menu
+$blue-light:   #0074C7; // Texte menu
 $blue-dark:     #00497C; // Texte principal instructions / Noms artisans
-$blue-admin:    #00497C; // Alias pour cohérence
-$green-accent:  #82B864; // Mot "artisan"
-$red-alert:     #CD2C2E; // Texte "48h" et "VOIR LA FICHE"
-$text-dark:     #384050;
-$blue-bg:       #f1f8fc;
+$green:  #82B864; // Mot "artisan"
+$red:     #CD2C2E; // Texte "48h" et "VOIR LA FICHE"
+$dark:     #384050;
+$white:       #f1f8fc;
 
 // 3. POLICES
 @font-face {
@@ -26,6 +25,6 @@ $blue-bg:       #f1f8fc;
 
 // 4. SURCHARGE BOOTSTRAP
 $font-family-sans-serif: 'Graphik', sans-serif;
-$primary: $blue-admin;
-$body-bg: #ffffff;
-$body-color: $text-dark;
+$primary: $blue-dark;
+$body-bg: $white;
+$body-color: $dark;

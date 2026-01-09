@@ -1,0 +1,135 @@
+@import "../styles/variables";
+@import "~bootstrap/scss/bootstrap";
+
+.page-fiche-artisan {
+  background-color: #f8f9fa;
+
+  // Style commun aux 3 frames (Cartes blanches)
+  .frame-artisan-info,
+  .frame-contact-info,
+  .frame-contact-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  // --- FRAME 1 : ARTISAN INFO ---
+  .frame-artisan-info {
+    .artisan-img { 
+      object-fit: cover; 
+      max-height: 350px; 
+    }
+    
+    // Tes modifs : Étoiles vertes et plus grandes
+    .rating-block .stars { 
+      color: #82b864; 
+      font-size: 2rem; 
+    }
+    
+    .artisan-title { 
+      color: $blue-dark; 
+      font-weight: 800; 
+    }
+    
+    // Tes modifs : Couleurs des badges
+    .badge-specialty { 
+      background-color: #0074c7; 
+      color: #f1f8fc; 
+      padding: 5px 10px; 
+      border-radius: 4px; 
+      font-weight: 600; 
+    }
+    
+    .badge-location { 
+      background-color: $blue-dark; 
+      color: #f1f8fc; 
+      padding: 5px 10px; 
+      border-radius: 4px; 
+      font-weight: 600; 
+    }
+    
+    .section-subtitle { 
+      color: $blue-dark; 
+      font-size: 1.4rem; 
+      font-weight: 700; 
+    }
+  }
+
+  // --- FRAME 2 : CONTACT INFO ---
+  .frame-contact-info {
+    .card-title { 
+      color: $blue-dark; 
+      font-weight: 700; 
+    }
+    
+    // J'ai gardé le style du bouton Site Web pour qu'il soit joli
+    .btn-website {
+      background-color: $blue-light;
+      color: white;
+      border: none;
+      padding: 12px;
+      transition: background 0.3s;
+      
+      &:hover { 
+        background-color: darken($blue-light, 10%); 
+        color: white;
+      }
+    }
+
+    .contact-item a { 
+      color: $dark; 
+      font-weight: 500; 
+      &:hover { 
+        color: $blue-light; 
+        text-decoration: underline; 
+      } 
+    }
+  }
+
+  // --- FRAME 3 : FORMULAIRE ---
+  .frame-contact-form {
+    .card-title { 
+      color: $blue-dark; 
+      font-weight: 700; 
+    }
+    
+    // Tes modifs : Labels plus gros
+    .form-label { 
+      font-weight: 600; 
+      color: $dark; 
+      font-size: 1.2rem; 
+    }
+    
+    .form-control {
+      border: 1px solid #ced4da;
+      padding: 10px;
+      // Bordure bleue au clic
+      &:focus { 
+        border-color: $blue-light; 
+        box-shadow: 0 0 0 0.2rem rgba($blue-light, 0.25); 
+      }
+    }
+
+    .btn-submit {
+      background-color: $blue-light;
+      color: white;
+      border: none;
+      padding: 12px;
+      transition: background 0.3s;
+      
+      &:hover { 
+        background-color: darken($blue-light, 10%); 
+      }
+    }
+
+    // Le petit message en bas avec tes modifs (gros texte + rouge)
+    .response-time {
+      font-size: 1.5rem;
+      color: $dark;
+      
+      strong { 
+        color: $red; 
+      } 
+    }
+  }
+}
